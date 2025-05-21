@@ -26,7 +26,7 @@ async def websocket_endpoint(websocket: WebSocket, room_id: int, user_id: str):
         # 연결이 끊기면 유저 제거(간단히 생략 가능)
         pass
 
-
 @router.get("/test")
 def hello():
     return {"message": "FastAPI 서버 연결 성공!"}
+
