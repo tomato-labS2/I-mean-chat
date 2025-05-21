@@ -1,11 +1,11 @@
-from services.chat_repository import ChatRepository
-from models.chat_dto import Message
+from .chat_repository import ChatRepository
+from ..models.chat_dto import Message
 import asyncio
 # asyncio : async/await 구문을 사용하여 동시성 코드를 작성할 수 있게 해주는 모듈로 단일 스레드 작업을 병렬로 처리할 수 있다.
 
 class ChatService:
     def __init__(self):
-        self.repository = ChatRepository
+        self.repository = ChatRepository()
         self.connections = {} # {room_id: {user_id: websocket}} 형태로 웹소켓 저장
 
     def create_room(self, room_id: int):

@@ -1,7 +1,7 @@
 from typing import List
 
 class ChatRoom:
-    def __init__(self):
+    def __init__(self, room_id: int):
         self.room_id = room_id
         self.users = [] # 접속한 유저 목록
         self.messages = [] # 메시지 기록
